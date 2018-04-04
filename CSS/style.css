@@ -142,7 +142,7 @@ input[type=text]:focus, input[type=mail]:focus, input[type=tel]:focus {
     border: 3px solid black;
 }
 
-input[type=submit], input[type=reset] {
+input[type=submit], input[type=button] {
     background-color: #212121;
     color: white;
 	text-decoration: none;
@@ -159,7 +159,7 @@ label{
 	font-family: 'Mina', sans-serif;
 }
 
-input[type=submit]:hover, input[type=reset]:hover {
+input[type=submit]:hover, input[type=button]:hover {
     background-color: #C9391D;
 }
 

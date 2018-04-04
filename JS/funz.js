@@ -1,5 +1,7 @@
 ﻿// JavaScript Document
 var es = 0;
+var sE;
+var distAlto, bioT, altezzaHeader;
 
 //funzione che permette di spostarsi nella pagina in modo che l'header coincida con la grandezza effettiva del div
 function linka(dove){
@@ -24,7 +26,11 @@ function goto(){
 	window.scrollTo(0, (ofs-h));*/
 	
 	//si rileva se lo scrollo viene effettuato verso il basso o verso l'alto
-	var sE = document.body;
+	bioT = document.getElementById("bio").offsetTop;
+	distAlto = document.documentElement.scrollTop;
+	console.log(distAlto);
+	altezzaHeader = document.getElementById("header").clientHeight;
+	sE = document.body;
 	sE.addEventListener('wheel', findScrollDirectionOtherBrowsers);
 	
 	
@@ -39,6 +45,11 @@ function findScrollDirectionOtherBrowsers(event){
             }
         	if (delta < 0){
             	console.log("giu");
+				if(distAlto < bioT)
+					{
+						console.log("vediamo se funziona xd");
+						window.scrollTo(0, (bioT-altezzaHeader))
+					}
             }else if (delta > 0){
             	console.log("su");
             }

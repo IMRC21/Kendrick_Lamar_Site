@@ -345,11 +345,11 @@ input[type=tel] {
 
 #cen{
 	width: 50%;
-
 }
 
 #cen p{
 	font-family: 'Fjalla One', sans-serif;
+	padding-bottom: 14px;
 	font-size: 50px;
 }
 
@@ -623,6 +623,7 @@ input[type=tel] {
 	width: 100%;
 	 margin-top: 8px;
     vertical-align: middle;
+	border: 2px solid #BFB172;
 }
 
 @media screen and (max-width: 802px) {

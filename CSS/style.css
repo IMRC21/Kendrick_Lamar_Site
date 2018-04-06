@@ -219,7 +219,6 @@ input[type=tel] {
 	top: 0;
 	text-decoration: none;
 	z-index: 666;
-	
 }
 
 #header nav{
@@ -488,7 +487,7 @@ input[type=tel] {
 }
 
 #album p{
-	padding-top: 3%;
+	padding-top: 2%;
 	padding-bottom: 2%;
 	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "sans-serif";
 	font-size: 50px;
@@ -712,15 +711,13 @@ footer{
 
 #f2 h1{
 	display: inline-block;
-	
-	
 }
 
 #f2 img{
+	margin-top: 3%;
 	display: inline-block;
 	width: 50px;
 	height: 50px;
-	float: right;
 }
 
 
@@ -732,8 +729,57 @@ footer{
 #f2 hr{
 }
 
-#f3 {
+#f3{
+	/*border: 1px solid white;*/
+	overflow: hidden;
+	position: relative;
 	left: 66%;
+	
+}
+
+#f3 h1{ 
+	color: white;
+	
+}
+
+#f3 hr{
+	width: 80%;
+	color: #BFB172;
+}
+
+#f3 p{
+	color: white;
+}
+
+@media only screen and (max-width: 802px){
+	#f1{
+		width: 100%;
+		position: static;
+		overflow: hidden;
+		height: 40%;
+	}
+	#f1 p{
+		font-size: 20px;
+	}
+	#f2{
+		position: static;
+		height: 15%;
+		width: 100%;
+		float: left;
+		margin-top: 14px;
+	}
+	
+	#f3 {
+		width: 100%;
+		height: 70%;
+		position: static;
+	}
+	#f3 h1{
+		text-align: center;
+	}
+	#f3 p{
+		text-align: center;
+}
 }
 
 /* Cambiato lo stile della barra dello scroll */

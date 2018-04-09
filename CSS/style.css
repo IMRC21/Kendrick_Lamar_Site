@@ -376,6 +376,11 @@ input[type=tel] {
 	color: white;
 }
 
+#streams img{
+	width: 200px;
+	height: 50%;
+}
+
 #text{
 	margin-top: 21%;
 }

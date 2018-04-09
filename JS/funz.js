@@ -2,6 +2,7 @@
 var es = 0;
 var sE;
 var distAlto, bioT, altezzaHeader;
+var p1, p2;
 
 //funzione che permette di spostarsi nella pagina in modo che l'header coincida con la grandezza effettiva del div
 function linka(dove){
@@ -107,8 +108,58 @@ function register(){
 function mostra(){
 	var div = document.getElementById("registerform");
 	document.getElementById("container").style.filter = "blur(0px)";
-	div.style.display = "none";
-			}
+	
+	let n = document.getElementById("name");
+	let lN = document.getElementById("lName");
+	let mail = document.getElementById("mail");
+	let phone = document.getElementById("tel");
+	
+	document.getElementById("nameErr").innerHTML = "";
+	document.getElementById("lNameErr").innerHTML = "";
+	document.getElementById("mailErr").innerHTML = "";
+	document.getElementById("telErr").innerHTML = "";
+
+
+	
+	if(n.value === ""){
+		document.getElementById("nameErr").innerHTML = "This field must not be blank";
+	}
+	
+	if(lN.value === ""){
+		document.getElementById("lNameErr").innerHTML = "This field must not be blank";
+	}
+	
+	if(mail.value === ""){
+		document.getElementById("mailErr").innerHTML = "This field must not be blank";
+	}
+	
+	if(phone.value === ""){
+		document.getElementById("telErr").innerHTML = "This field must not be blank";
+	}
+	
+	p1 = document.getElementById("psw1");
+	p2 = document.getElementById("psw2");
+	
+	document.getElementById("match").innerHTML =  "";
+	p1.style.backgroundColor = "#212121";
+	p2.style.backgroundColor = "#212121";
+	
+	if(p1.value != p2.value){
+		document.getElementById("match").innerHTML =  "Passwords does not match";
+		p1.style.backgroundColor = "#C9391D";
+		p2.style.backgroundColor = "#C9391D";
+	}
+	
+	if(p1.value.length < 8){
+		document.getElementById("match").innerHTML =  "Password must be at least 8 characters long";
+		p1.style.backgroundColor = "#C9391D";
+		p2.style.backgroundColor = "#C9391D";
+	}
+	
+	
+	
+	//div.style.display = "none";
+}
 
 
 function easteregg(){

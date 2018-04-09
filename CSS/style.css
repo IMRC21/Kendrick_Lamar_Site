@@ -121,10 +121,14 @@ body{
 }
 
 
+.err{
+	color: #C9391D;
+	display: block;
+	font-size: 15px;
+}
 
 
-
-input[type=text], select, input[type=mail], input[type=tel], input[type=date] {
+input[type=text], select, input[type=mail], input[type=tel], input[type=date], input[type=password]{
 	background-color: #212121;
 	color: white;
     width: 100%;
@@ -226,6 +230,7 @@ input[type=tel] {
 }
 
 
+
 .item{
 	display: inline;
 	margin-top: 0;
@@ -279,6 +284,7 @@ input[type=tel] {
 		left: 0;
 	}
 }
+
 
 .content{
 	width:100%;

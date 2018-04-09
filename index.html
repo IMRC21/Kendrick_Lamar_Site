@@ -19,25 +19,58 @@
 	<body onLoad="cop()" onscroll="">
 		<!--Form registrazione-->
 		<div id="registerform">
-			   		<form action="">
+			   		<form action="" onSubmit="mostra()">
 						<label>First Name:</label>
-						<input type="text" placeholder="First name">
+						<label id="nameErr" class="err">
+							
+						</label>
+						<input type="text" placeholder="First name" id="name">
+						
+						
 						<label>Last Name:</label>
-						<input type="text" placeholder="Last name">
+						<label id="lNameErr" class="err">
+							
+						</label>
+						<input type="text" placeholder="Last name" id="lName">
+						
+						
 						<label>Birthday:</label>
 						<input type="date">
+						
+						
 						<label class="radiobtn">Male
 							<input type="radio" name="radio" value="male" checked>
 							<span class="checkmark"></span>
 						</label>
+						
 						<label class="radiobtn">Female
 							<input type="radio" name="radio" value="female">
 							<span class="checkmark"></span>
 						</label><br><br>
+						
 						<label>E-mail:</label>
-						<input type="mail" placeholder="E-mail">
+						<label id="mailErr" class="err">
+							
+						</label>
+						<input type="mail" placeholder="E-mail" id="mail">
+						
+						
+						<label id="labelPsw">Password:</label>
+						<label id="match" class="err">
+							
+						</label>
+						<input type="password" id="psw1">
+						
+						<label>Repeat password:</label>
+						<input type="password" id="psw2">
+						
 						<label>Phone:</label>
-						<input type="tel" placeholder="256-646-7800">
+						<label id="telErr" class="err">
+							
+						</label>
+						<input type="tel" placeholder="256-646-7800" id="tel">
+						
+						
 						<label>Country</label>
 						<select>
 						  <option value="Italy">Italy</option>
@@ -46,9 +79,10 @@
 						  <option value="New York">New York</option>
 						  <option value="Spain">Spain</option>
 						</select>
+						
 						<center>
-							<input type="button" value="Cancel" onClick="mostra()">
-							<input type="submit" value="Submit" onClick="mostra()">
+							<input type="button" value="Cancel" >
+							<input type="submit" value="Submit">
 						</center>
   					</form>
 			   </div>

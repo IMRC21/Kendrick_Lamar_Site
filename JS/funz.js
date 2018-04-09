@@ -18,12 +18,12 @@ function linka(dove){
 
 	window.scrollTo(0, (ofs-head));
 }
-
+/*
 function goto(){
 	/*var h = document.getElementById("header").clientHeight;
 	var he = document.getElementById("bio");
 	var ofs = parseInt(he.offsetTop);
-	window.scrollTo(0, (ofs-h));*/
+	window.scrollTo(0, (ofs-h));
 	
 	//si rileva se lo scrollo viene effettuato verso il basso o verso l'alto
 	bioT = document.getElementById("bio").offsetTop;
@@ -35,7 +35,7 @@ function goto(){
 	
 	
 }
-
+*/
 function findScrollDirectionOtherBrowsers(event){
         	var delta;
         	if (event.wheelDelta){

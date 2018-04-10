@@ -762,6 +762,11 @@ footer{
 	color: white;
 }
 
+canvas{
+	margin-top: 1%;
+	background: #212121;
+}
+
 @media only screen and (max-width: 802px){
 	#f1{
 		width: 100%;
@@ -791,6 +796,9 @@ footer{
 	#f3 p{
 		text-align: center;
 }
+	canvas{
+		margin-left: 20%;
+	}
 }
 
 /* Cambiato lo stile della barra dello scroll */

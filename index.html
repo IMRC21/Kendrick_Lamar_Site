@@ -418,6 +418,36 @@
 				
 				
 			</p>
+			
+			<canvas width="300" height="200" id="canvas"></canvas>
+			<script>
+
+			var c = document.getElementById("canvas");
+			var ctx = c.getContext("2d");
+			ctx.beginPath();
+			ctx.moveTo(20, 150);
+			ctx.lineTo(80, 20);
+			ctx.strokeStyle = "green";
+			ctx.stroke();
+			ctx.font = "15px Arial";
+			ctx.fillText("2015",10,170);
+
+			ctx.beginPath();
+			ctx.moveTo(80, 20);
+			ctx.lineTo(120, 40);
+			ctx.strokeStyle = "green";
+			ctx.stroke();
+			ctx.font = "15px Arial";
+			ctx.fillText("2016",110,170);
+
+			ctx.beginPath();
+			ctx.moveTo(120, 40);
+			ctx.lineTo(200, 60);
+			ctx.strokeStyle = "green";
+			ctx.stroke();
+			ctx.font = "15px Arial";
+			ctx.fillText("2017",190,170);
+			</script>
 		</div>	
 		</footer>
 		</div>

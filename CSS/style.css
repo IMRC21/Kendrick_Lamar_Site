@@ -91,6 +91,16 @@ body{
 	background-color: #BFB172;
 }
 
+.pForm{
+	padding: 20px;
+	color: black;
+}
+
+.pForm a{
+	color: rgb(133, 37, 37);
+	cursor: pointer;
+}
+
 
 
 /* The container */
@@ -165,7 +175,7 @@ body{
 }
 
 
-input[type=text], select, input[type=mail], input[type=tel], input[type=date], input[type=password]{
+input[type=text], select, input[type=email], input[type=tel], input[type=date], input[type=password]{
 	background-color: #212121;
 	color: white;
     width: 100%;
@@ -179,7 +189,7 @@ input[type=text], select, input[type=mail], input[type=tel], input[type=date], i
 	outline: none;
 }
 
-input[type=text]:focus, input[type=mail]:focus, input[type=tel]:focus {
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus {
     border: 3px solid black;
 }
 
@@ -319,6 +329,13 @@ input[type=tel] {
 		position: relative;
 		top: 0;
 		left: 0;
+	}
+	#loginForm{
+		width: 70%;
+		left: 10%;
+	}
+	#loginDiv{
+		display: none;
 	}
 }
 

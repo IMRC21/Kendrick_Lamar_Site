@@ -54,6 +54,43 @@ body{
 	border-radius: 4px;
 }
 
+/* Il form di registrazione*/
+#loginForm{
+	display: none;
+	margin: auto;
+	background-color: #BFB172;
+	width: 20%;
+	left: 40%;
+	top: 8%;
+	position: fixed;
+	z-index: 100;
+	height: auto;
+	padding-top: 20px;
+	padding-left: 2%;
+	padding-right: 2%;
+	border-radius: 4px;
+}
+
+#loginDiv{
+	position: absolute;
+	padding: 10px;
+	left: 70%;
+	margin-bottom: 3px;
+	width: 270px;
+	font-size: 20px;
+	text-align: center;
+	
+}
+
+#loginDiv p>a{
+	padding: 0px;
+	cursor: pointer;
+}
+
+#loginDiv p>a:hover{
+	background-color: #BFB172;
+}
+
 
 
 /* The container */
@@ -358,11 +395,9 @@ input[type=tel] {
 	font-size: 50px;
 }
 
-#cen video{
-	 width: 100%;
-	 min-width: 200px;
-	 height: auto;
-	 position: relative;
+#cen iframe{
+	 width: 80%;
+	 height: 420px;
 }
 
 #dest{

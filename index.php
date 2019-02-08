@@ -1,3 +1,4 @@
+<?php include('./PHP/server.php') ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -17,8 +18,34 @@
 	</head>
 	<body onLoad="cop()">
 		<!--Form registrazione-->
+		
 		<div id="registerform">
-			   		<form action="" onSubmit="mostra()">
+		<form method="post" action="index.php">
+			<?php include('./PHP/registration/errors.php'); ?>
+			<div class="input-group">
+			<label>Username</label>
+			<input type="text" name="username" value="<?php echo $username; ?>">
+			</div>
+			<div class="input-group">
+			<label>Email</label>
+			<input type="email" name="email" value="<?php echo $email; ?>">
+			</div>
+			<div class="input-group">
+			<label>Password</label>
+			<input type="password" name="password_1">
+			</div>
+			<div class="input-group">
+			<label>Confirm password</label>
+			<input type="password" name="password_2">
+			</div>
+			<div class="input-group">
+			<input type="submit" class="btn" name="reg_user">Register</button>
+			</div>
+			<p>
+				Already a member? <a href="./PHP/registration/login.php">Sign in</a>
+			</p>
+		</form>
+			   		<!-- <form action="" onSubmit="return mostra();">
 						<label>First Name:</label>
 						<label id="nameErr" class="err">
 
@@ -80,23 +107,58 @@
 						</select>
 
 						<center>
-							<input type="button" value="Cancel" >
+							<input type="button" value="Cancel" onclick="hideRegister()">
 							<input type="submit" value="Submit">
 						</center>
-  					</form>
+  					</form> -->
+			   </div>
+			   <div id="loginForm">
+					<form method="post" action="index.php">
+						<?php include('./PHP/registration/errors.php'); ?>
+						<div class="input-group">
+							<label>Username</label>
+							<input type="text" name="username" >
+						</div>
+						<div class="input-group">
+							<label>Password</label>
+							<input type="password" name="password">
+						</div>
+						<div class="input-group">
+						<center>
+							<input type="button" value="Cancel" onclick="hideLogin()">
+							<input type="submit" value="Login" name="login_user">
+						</center>
+						</div>
+						<p>
+							Not yet a member? <a href="./PHP/registration/login.php">Sign up</a>
+						</p>
+					</form>
 			   </div>
 		<!--Tutto il contenuto del sito-->
 		<div id="container">
 			<!--Creazione dell'header-->
 		   <div id="header" class="animated fadeInDown">
-				<div class="submit">
-					<a id="login" src="#header">
+			   <!-- notification message -->
+			   <?php if (!isset($_SESSION['username'])) : ?>
+			   <div class="submit">
+					<a id="login" onClick="login()">
 						Login
 					</a>
 					<a id="register" onClick="register()">
 						Register
 					</a>
 				</div>
+			   <?php endif ?>
+
+
+				<!-- logged in user information -->
+				<?php  if (isset($_SESSION['username'])) : ?>
+					<div id='loginDiv'>
+						<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+						<p> <a href="./PHP/index.php?logout='1'">logout</a> </p>
+					</div>
+				<?php endif ?>
+				
 				<nav>
 					<a href="index.html" id="title">
 						<span class="highlight">K</span>ENDRICK <span class="highlight">L</span>AMAR

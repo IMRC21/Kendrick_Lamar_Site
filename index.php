@@ -172,6 +172,7 @@
 											Gallery
 										</a>
 									</li>
+									<?php if (!isset($_SESSION['username'])) : ?>
 									<li class="mitem" onClick="nascondi()">
 										<a onClick="login()">
 											Login
@@ -182,6 +183,19 @@
 											Register
 										</a>
 									</li>
+			   						<?php endif ?>
+									   <?php  if (isset($_SESSION['username'])) : ?>
+									   <li class="mitem" onClick="nascondi()">
+											<a href='./PHP/accountInfo.php'>
+												Account Info
+											</a>
+										</li>
+										<li class='mitem loginMobile'>
+											<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+											<p> <a href="./PHP/index.php?logout='1'">logout</a> </p>
+											
+										</li>
+									<?php endif ?>
 								</div>
 							</ul>
 						</ul>

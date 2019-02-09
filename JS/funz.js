@@ -6,6 +6,8 @@ var p1, p2;
 
 //funzione che permette di spostarsi nella pagina in modo che l'header coincida con la grandezza effettiva del div
 function linka(dove) {
+	console.log("scroll");
+	
 	var altezza = document.getElementById(dove).clientHeight;
 	var head = document.getElementById("header").clientHeight;
 	var he = document.getElementById(dove);
@@ -17,7 +19,10 @@ function linka(dove) {
 	console.log("offset TOP: " + ofs);
 	*/
 
-	window.scrollTo(0, (ofs - head));
+	//window.scrollTo(0, (ofs - head));
+	$('html, body').animate({
+		scrollTop: (ofs - head)
+	}, 1000);
 }
 /*
 function goto(){

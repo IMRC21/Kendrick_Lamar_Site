@@ -29,7 +29,6 @@ body{
 
 .submit a{
 	margin-left: 7px;
-	border-radius: 20%;
 	cursor: pointer;
 }
 
@@ -74,12 +73,17 @@ body{
 #loginDiv{
 	position: absolute;
 	padding: 10px;
+	margin-top: -20px;
 	left: 70%;
 	margin-bottom: 3px;
 	width: 270px;
-	font-size: 20px;
+	font-size: 15px;
 	text-align: center;
 	
+}
+
+a.iconUser {
+	float: right;
 }
 
 #loginDiv p>a{
@@ -302,6 +306,8 @@ input[type=tel] {
 .mitem{
 	display: none;
 }
+
+
 
 /*Modifica: prima era soltanto "a" e quindi metteva questi attributi a tutti i link. Aggiunto #header*/
 #header a{

@@ -11,6 +11,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Kendrick Lamar</title>
 		<script language="Javascript" src="JS/funz.js"></script>
@@ -19,91 +20,41 @@
 	<body onLoad="cop()">
 		<!--Form registrazione-->
 		
-		<div id="registerform">
-		<form method="post" action="index.php">
-			<?php include('./PHP/errors.php'); ?>
-			<label>Username</label>
-			<input type="text" name="username" value="<?php echo $username; ?>">
-			<label>Email</label>
-			<input type="email" name="email" value="<?php echo $email; ?>">
-			<label>Password</label>
-			<input type="password" name="password_1">
-			<label>Confirm password</label>
-			<input type="password" name="password_2">
-			<input type="button" value="Cancel" onclick="hideRegister()">
-			<input type="submit" class="btn" name="reg_user" value='Register'>
-			<p class='pForm'>
-				Already a member? <a onclick="hideRegister();login();">Sign in</a>
-			</p>
-		</form>
-			   		<!-- <form action="" onSubmit="return mostra();">
-						<label>First Name:</label>
-						<label id="nameErr" class="err">
-
-						</label>
-						<input type="text" placeholder="First name" id="name">
-
-
-						<label>Last Name:</label>
-						<label id="lNameErr" class="err">
-
-						</label>
-						<input type="text" placeholder="Last name" id="lName">
-
-
-						<label>Birthday:</label>
-						<input type="date">
-
-
-						<label class="radiobtn">Male
-							<input type="radio" name="radio" value="male" checked>
-							<span class="checkmark"></span>
-						</label>
-
-						<label class="radiobtn">Female
-							<input type="radio" name="radio" value="female">
-							<span class="checkmark"></span>
-						</label><br><br>
-
-						<label>E-mail:</label>
-						<label id="mailErr" class="err">
-
-						</label>
-						<input type="mail" placeholder="E-mail" id="mail">
-
-
-						<label id="labelPsw">Password:</label>
-						<label id="match" class="err">
-
-						</label>
-						<input type="password" id="psw1">
-
-						<label>Repeat password:</label>
-						<input type="password" id="psw2">
-
-						<label>Phone:</label>
-						<label id="telErr" class="err">
-
-						</label>
-						<input type="tel" placeholder="256-646-7800" id="tel">
-
-
-						<label>Country</label>
-						<select>
-						  <option value="Italy">Italy</option>
-						  <option value="London">London</option>
-						  <option value="Amsterdam">Amsterdam</option>
-						  <option value="New York">New York</option>
-						  <option value="Spain">Spain</option>
-						</select>
-
-						<center>
-							<input type="button" value="Cancel" onclick="hideRegister()">
-							<input type="submit" value="Submit">
-						</center>
-  					</form> -->
-			   </div>
-			   <div id="loginForm">
+			<div id="registerform">
+				<form method="post" action="index.php">
+					<?php include('./PHP/errors.php'); ?>
+					<label>Firstname</label>
+					<input type="text" name="firstname">
+					<label>Lastname</label>
+					<input type="text" name="lastname">
+					<label>Birthday:</label>
+					<input type="date" name="birthday">
+					<label class="radiobtn">Male
+					<input type="radio" name="gender" value="M" checked>
+					<span class="checkmark"></span>
+					</label>
+					<label class="radiobtn">Female
+					<input type="radio" name="gender" value="F">
+					<span class="checkmark"></span>
+					</label><br><br>
+					<label>Phonr:</label>
+					<input type="tel" name="phone">
+					<label>Username</label>
+					<input type="text" name="username" value="<?php echo $username; ?>">
+					<label>Email</label>
+					<input type="email" name="email" value="<?php echo $email; ?>">
+					<label>Password</label>
+					<input type="password" name="password_1">
+					<label>Confirm password</label>
+					<input type="password" name="password_2">
+					<input type="button" value="Cancel" onclick="hideRegister()">
+					<input type="submit" class="btn" name="reg_user" value='Register'>
+					<p class='pForm'>
+						Already a member? <a onclick="hideRegister();login();">Sign in</a>
+					</p>
+				</form>
+			</div>
+			<div id="loginForm">
 					<form method="post" action="index.php">
 						<?php include('./PHP/errors.php'); ?>
 							<label>Username</label>
@@ -118,7 +69,7 @@
 							Not yet a member? <a onclick="hideLogin();register();">Sign up</a>
 						</p>
 					</form>
-			   </div>
+			</div>
 		<!--Tutto il contenuto del sito-->
 		<div id="container">
 			<!--Creazione dell'header-->
@@ -149,8 +100,10 @@
 				<!-- logged in user information -->
 				<?php  if (isset($_SESSION['username'])) : ?>
 					<div id='loginDiv'>
+						<a href='./PHP/accountInfo.php' class='iconUser'><i class='fas fa-user ' style='font-size:24px'></i></a>
 						<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
 						<p> <a href="./PHP/index.php?logout='1'">logout</a> </p>
+						
 					</div>
 				<?php endif ?>
 				
@@ -164,7 +117,7 @@
 					<!--Creazione navbar Desktop-->
 						<ul class="navbar">
 							<li class="item">
-								<a href="#">
+								<a onclick="linka('latest')">
 									 Home
 								</a>
 							</li>

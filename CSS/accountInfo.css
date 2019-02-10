@@ -104,10 +104,22 @@ body {
     background: #fff;
   }
 
-  a > input[type=text]{
+  input[type=text]{
       border: none;
       background-color: transparent;
       width: 80%;
+  }
+
+  .dataList{
+    font-size: 16px;
+    padding: 20px;
+    letter-spacing: 4px;
+  }
+
+  .dataList p{
+    color: #BFB172;
+    font-weight: 600;
+    display: inline;
   }
 
   .glyphicon-circle-arrow-left{

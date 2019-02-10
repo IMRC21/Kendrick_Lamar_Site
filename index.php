@@ -109,7 +109,7 @@
 				
 				<nav>
 					<a href="index.php" id="title">
-						<span class="highlight">K</span>ENDRICK <span class="highlight">L</span>AMAR
+						<span class="highlight">K</span>ENDRICK <span class="highlight">L</span>AMAR.
 					 </a>
 						<div style="height: 15px;">
 						</div>

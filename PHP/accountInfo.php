@@ -54,41 +54,34 @@ $user = mysqli_fetch_assoc($result);
 		</div>
 		<div class="col-md-9">
             <div class="profile-content">
-            <ul class="nav">
+            <ul class="nav dataList">
 						<li>
-							<a href="#">
-                            Firstname: <input type='text' value='<?php echo $user['firstname'];?> ' disabled>
-                             </a>
+                            <p>Firstname: </p><input type='text' value='<?php echo $user['firstname'];?> ' disabled>
+                             
                         </li>
                         <li>
-							<a href="#">
-                            Lastname: <input type='text' value='<?php echo $user['lastname'];?> ' disabled>
-                             </a>
+                            <p>Lastname: </p><input type='text' value='<?php echo $user['lastname'];?> ' disabled>
+                            
                         </li>
                         <li>
-							<a href="#">
-                            Username: <input type='text' value='<?php echo $user['username'];?> ' disabled>
-                             </a>
+                            <p>Username: </p><input type='text' value='<?php echo $user['username'];?> ' disabled>
+                             
                         </li>
                         <li>
-							<a href="#">
-                            E-Mail: <input type='text' value='<?php echo $user['email'];?> ' disabled>
-                             </a>
+                            <p>E-Mail: </p><input type='text' value='<?php echo $user['email'];?> ' disabled>
+                             
 						</li>
                         <li>
-							<a href="#">
-                            Birthday: <input type='text' value='<?php echo $user['birthday'];?> ' disabled>
-                             </a>
+                            <p>Birthday: </p><input type='text' value='<?php echo $user['birthday'];?> ' disabled>
+                             
                         </li>
                         <li>
-							<a href="#">
-                            Gender: <input type='text' value='<?php if($user['gender']=="M"){echo "Male";}else{echo "Female";}?> ' disabled>
-                             </a>
+                            <p>Gender: </p><input type='text' value='<?php if($user['gender']=="M"){echo "Male";}else{echo "Female";}?> ' disabled>
+                             
                         </li>
                         <li>
-							<a href="#">
-                            Phone: <input type='text' value='<?php echo $user['phone'];?> ' disabled>
-                             </a>
+                            <p>Phone: </p><input type='text' value='<?php echo $user['phone'];?> ' disabled>
+                             
 						</li>
 					</ul>
             </div>

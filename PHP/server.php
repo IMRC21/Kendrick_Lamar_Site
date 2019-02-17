@@ -80,5 +80,16 @@ if (isset($_POST['login_user'])) {
         }
     }
   }
+
+  if (isset($_POST['login_user'])) {
+    $ticket = mysqli_real_escape_string($db, $_POST['ticket']);
+    $guest = mysqli_real_escape_string($db, $_POST['guests']);
+    $place = mysqli_real_escape_string($db, $_POST['place']);
+
+    $query = "INSERT INTO tour (tickets, guests, place) 
+  			  VALUES('$ticket','$guest','$place')";
+    mysqli_query($db, $query);
+    header('location: ./index.php');
+  }
   
   ?>

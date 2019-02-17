@@ -11,7 +11,7 @@ $username = $_SESSION['username'];
 $user_check_query = "SELECT * FROM user WHERE username='$username' OR email='$email' LIMIT 1";
 $result = mysqli_query($db, $user_check_query);
 $user = mysqli_fetch_assoc($result);
-
+echo $user['username'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,10 +82,35 @@ $user = mysqli_fetch_assoc($result);
                         <li>
                             <p>Phone: </p><input type='text' value='<?php echo $user['phone'];?> ' disabled>
                              
-						</li>
+                        </li>
+                        <?php if ($user['username'] == 'Admin') : ?>
+                                <div class='col'>
+                                <form method="post" action="index.php">
+                                <li>
+                                        <p>Tickets amount: </p><input type='text' value='' name="ticket">
+                                </li>
+                                <li>
+                                        <p>Tickets amount: </p><input type='text' value='' name="ticket">
+                                </li>
+                                <li>
+                                        <p>Tickets amount: </p><input type='text' value='' name="ticket">
+                                </li>
+                                        <label>tickets amount</label>
+                                        <input type="text"  >
+                                        <label>Guests</label>
+                                        <input type="text" name="guests">
+                                        <label>Place</label>
+                                        <input type="text" name="place">
+                                    <center>
+                                        <input type="submit" value="insertTicket" name="login_user">
+                                    </center>
+                                </form>
+                                </div>
+                        <?php endif ?>
 					</ul>
             </div>
-		</div>
+        </div>
+        
 	</div>
 </div>
 </body>

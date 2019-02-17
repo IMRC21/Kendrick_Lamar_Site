@@ -1,0 +1,93 @@
+<nav>
+    <a href="index.php" id="title">
+        <span class="highlight">K</span>ENDRICK <span class="highlight">L</span>AMAR.
+     </a>
+        <div style="height: 15px;">
+        </div>
+            <hr width="80%" color="#BFB172"/>
+    <!--Creazione navbar Desktop-->
+        <ul class="navbar">
+            <li class="item">
+                <a onclick="linka('latest')">
+                     Home
+                </a>
+            </li>
+            <li class="item">
+                <a onclick="linka('bio')">
+                    Biography
+                </a>
+            </li>
+            <li class="item">
+                <a onclick="linka('album')">
+                    Album
+                </a>
+            </li>
+            <li class="item">
+                <a onclick="linka('gallery')">
+                    Gallery
+                </a>
+            </li>
+            <li class="item">
+                <a href="https://txdxe.com/collections/kendrick-lamar">
+                    Shop
+                </a>
+            </li>
+            <!--Costruzione menu per mobile-->
+            <li class="mitem bordo">
+                <a onclick="menuDiv();">Menu</a>
+            </li>
+            <ul id="mshow">
+                <div>
+                    <li class="mitem">
+                        <a href="#" onClick="nascondi()">
+                         Home
+                        </a>
+                    </li>
+                    <li class="mitem">
+                        <a href="https://txdxe.com/collections/kendrick-lamar" onClick="nascondi()">
+                            Shop
+                        </a>
+                    </li>
+                    <li class="mitem">
+                        <a href="#bio" onClick="nascondi()">
+                            Biography
+                        </a>
+                    </li>
+                    <li class="mitem">
+                        <a href="#album" onClick="nascondi()">
+                            Album
+                        </a>
+                    </li>
+                    <li class="mitem">
+                        <a href="#gallery" onClick="nascondi()">
+                            Gallery
+                        </a>
+                    </li>
+                    <?php if (!isset($_SESSION['username'])) : ?>
+                    <li class="mitem" onClick="nascondi()">
+                        <a onClick="login()">
+                            Login
+                        </a>
+                    </li>
+                    <li class="mitem" onClick="nascondi()">
+                        <a onClick="register()">
+                            Register
+                        </a>
+                    </li>
+                       <?php endif ?>
+                       <?php  if (isset($_SESSION['username'])) : ?>
+                       <li class="mitem" onClick="nascondi()">
+                            <a href='./PHP/accountInfo.php'>
+                                Account Info
+                            </a>
+                        </li>
+                        <li class='mitem loginMobile'>
+                            <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+                            <p> <a href="./PHP/index.php?logout='1'">logout</a> </p>
+                            
+                        </li>
+                    <?php endif ?>
+                </div>
+            </ul>
+        </ul>
+</nav>
